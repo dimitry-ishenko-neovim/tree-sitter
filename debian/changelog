@@ -1,0 +1,5 @@
+tree-sitter (0.25.6-1) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 01 Jul 2025 21:13:40 -0400
