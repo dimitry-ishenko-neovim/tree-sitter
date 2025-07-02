@@ -7,8 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
 Standards-Version: 4.6.2
 Homepage: https://tree-sitter.github.io/tree-sitter
-Vcs-Browser: https://github.com/tree-sitter/tree-sitter
-Vcs-Git: https://github.com/tree-sitter/tree-sitter
+Vcs-Browser: https://github.com/dimitry-ishenko-neovim/tree-sitter
+Vcs-Git: https://github.com/dimitry-ishenko-neovim/tree-sitter.git
 
 Package: libtree-sitter0.25
 Architecture: any
