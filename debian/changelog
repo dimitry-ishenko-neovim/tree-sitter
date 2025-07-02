@@ -1,5 +1,24 @@
-tree-sitter (0.25.6-1) UNRELEASED; urgency=medium
+tree-sitter (0.25.6-1) unstable; urgency=medium
 
-  * Initial release.
+  [ Dimitry Ishenko ]
+  * Add Debian packaging
 
- -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 01 Jul 2025 21:13:40 -0400
+  [ Max Brunsfeld ]
+  * 0.25.6
+
+  [ Olive Easton ]
+  * fix(generate): re-enable default url features
+
+  [ tree-sitter-ci-bot[bot] ]
+  * Fully fix field underflow in go_to_previous_sibling (#4483) (#4485)
+
+  [ Kai Pastor ]
+  * fix(build): pkgconfig and use of GNUInstallDirs (#4319)
+
+  [ Christian Clason ]
+  * Revert "feat: add build sha to parser.c header comment" (#4475)
+
+  [ Max Brunsfeld ]
+  * Ignore lock files in grammar repos
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 01 Jul 2025 22:03:43 -0400
