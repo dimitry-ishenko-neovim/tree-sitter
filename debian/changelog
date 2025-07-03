@@ -1,3 +1,10 @@
+tree-sitter (0.25.6-3) unstable; urgency=medium
+
+  * d/copyright: simplify
+  * d/files: remove
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 02 Jul 2025 23:10:46 -0400
+
 tree-sitter (0.25.6-2) unstable; urgency=medium
 
   * d/control: fix path
