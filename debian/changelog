@@ -1,3 +1,9 @@
+tree-sitter (0.25.6-4) unstable; urgency=medium
+
+  * d/control: handle upgrades from libtree-sitter0
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 10 Jul 2025 12:16:21 -0400
+
 tree-sitter (0.25.6-3) unstable; urgency=medium
 
   * d/copyright: simplify
