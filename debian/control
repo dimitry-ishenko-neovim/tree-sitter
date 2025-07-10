@@ -13,6 +13,8 @@ Vcs-Git: https://github.com/dimitry-ishenko-neovim/tree-sitter.git
 Package: libtree-sitter0.25
 Architecture: any
 Multi-Arch: same
+Breaks: libtree-sitter0
+Replaces: libtree-sitter0
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
