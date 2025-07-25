@@ -1,3 +1,66 @@
+tree-sitter (0.25.8-1) unstable; urgency=medium
+
+  [ Dimitry Ishenko ]
+  * Merge tag 'v0.25.8'
+
+  [ Will Lillis ]
+  * 0.25.8
+  * perf: reorder conditional operands
+  * fix(generate): propagate node types error
+  * 0.25.7
+  * perf: reorder expensive conditional operand
+
+  [ WillLillis ]
+  * fix(generate): use topological sort for subtype map
+
+  [ Antonin Delpeuch ]
+  * perf: More efficient computation of used symbols
+
+  [ Will Lillis ]
+  * perf: reserve `Vec` capacities where appropriate
+
+  [ Bernardo Uriarte ]
+  * fix(web): wasm export paths
+
+  [ Antonin Delpeuch ]
+  * Fix 'extra' field generation for node-types.json
+  * Add test demonstrating failure to populate 'extra'
+
+  [ WillLillis ]
+  * fix(rust): ignore new nightly lint, correct order of lint list
+
+  [ Veesh Goldman ]
+  * fix(cli): require correct setuptools version
+
+  [ Will Lillis ]
+  * fix(generate): only display conflicting symbol name in non-terminal
+    word token error message if available
+
+  [ Christian Clason ]
+  * ci(lint): stop linting with nightly
+
+  [ ObserverOfTime ]
+  * fix(loader): fix no-default-features build (#4505)
+
+  [ Will Lillis ]
+  * fix(xtask): limit `test` command to a single thread on windows
+    (#4489)
+
+  [ tree-sitter-ci-bot[bot] ]
+  * fix(bindings): update swift & node dependencies (#4432) (#4499)
+
+  [ James McCoy ]
+  * fix(test): remove period in
+    `test_flatten_grammar_with_recursive_inline_variable`
+
+  [ Thalia Archibald ]
+  * fix(highlight): account for carriage return at EOF and chunk ends
+
+  [ Will Lillis ]
+  * fix(lib): replace raw array accesses with `array_get`
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 24 Jul 2025 20:05:12 -0400
+
 tree-sitter (0.25.6-4) unstable; urgency=medium
 
   * d/control: handle upgrades from libtree-sitter0
