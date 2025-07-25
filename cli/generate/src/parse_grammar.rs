@@ -238,13 +238,14 @@ pub(crate) fn parse_grammar(input: &str) -> ParseGrammarResult<InputGrammar> {
     let mut in_progress = HashSet::new();
 
     for (name, rule) in &rules {
-        if !variable_is_used(
-            &rules,
-            &extra_symbols,
-            &external_tokens,
-            name,
-            &mut in_progress,
-        ) && grammar_json.word.as_ref().is_none_or(|w| w != name)
+        if grammar_json.word.as_ref().is_none_or(|w| w != name)
+            && !variable_is_used(
+                &rules,
+                &extra_symbols,
+                &external_tokens,
+                name,
+                &mut in_progress,
+            )
         {
             grammar_json.conflicts.retain(|r| !r.contains(name));
             grammar_json.supertypes.retain(|r| r != name);
@@ -272,12 +273,11 @@ pub(crate) fn parse_grammar(input: &str) -> ParseGrammarResult<InputGrammar> {
         .reserved
         .into_iter()
         .map(|(name, rule_values)| {
-            let mut reserved_words = Vec::new();
-
             let Value::Array(rule_values) = rule_values else {
                 Err(ParseGrammarError::InvalidReservedWordSet)?
             };
 
+            let mut reserved_words = Vec::with_capacity(rule_values.len());
             for value in rule_values {
                 reserved_words.push(parse_rule(serde_json::from_value(value)?, false)?);
             }

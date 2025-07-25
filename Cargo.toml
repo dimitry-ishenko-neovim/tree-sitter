@@ -14,7 +14,7 @@ members = [
 resolver = "2"
 
 [workspace.package]
-version = "0.25.6"
+version = "0.25.8"
 authors = [
   "Max Brunsfeld <maxbrunsfeld@gmail.com>",
   "Amaan Qureshi <amaanq12@gmail.com>",
@@ -60,6 +60,8 @@ missing_errors_doc = "allow"
 missing_panics_doc = "allow"
 module_name_repetitions = "allow"
 multiple_crate_versions = "allow"
+needless_for_each = "allow"
+obfuscated_if_else = "allow"
 option_if_let_else = "allow"
 or_fun_call = "allow"
 range_plus_one = "allow"
@@ -75,7 +77,6 @@ too_many_lines = "allow"
 unnecessary_wraps = "allow"
 unused_self = "allow"
 used_underscore_items = "allow"
-obfuscated_if_else = "allow"
 
 [profile.optimize]
 inherits = "release"
@@ -145,6 +146,7 @@ tempfile = "3.15.0"
 thiserror = "2.0.11"
 tiny_http = "0.12.0"
 toml = "0.8.19"
+topological-sort = "0.2.2"
 unindent = "0.2.3"
 url = { version = "2.5.4", features = ["serde"] }
 walkdir = "2.5.0"
