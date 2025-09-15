@@ -2062,7 +2062,7 @@ impl<'tree> Node<'tree> {
 
     #[must_use]
     pub fn utf16_text<'a>(&self, source: &'a [u16]) -> &'a [u16] {
-        &source[self.start_byte()..self.end_byte()]
+        &source[self.start_byte() / 2..self.end_byte() / 2]
     }
 
     /// Create a new [`TreeCursor`] starting from this node.
@@ -2444,7 +2444,7 @@ impl Query {
                 // Error types that report names
                 ffi::TSQueryErrorNodeType | ffi::TSQueryErrorField | ffi::TSQueryErrorCapture => {
                     let suffix = source.split_at(offset).1;
-                    let in_quotes = source.as_bytes()[offset - 1] == b'"';
+                    let in_quotes = offset > 0 && source.as_bytes()[offset - 1] == b'"';
                     let mut backslashes = 0;
                     let end_offset = suffix
                         .find(|c| {
@@ -3353,9 +3353,11 @@ impl<'tree> QueryMatch<'_, 'tree> {
             .iter()
             .all(|predicate| match predicate {
                 TextPredicateCapture::EqCapture(i, j, is_positive, match_all_nodes) => {
-                    let mut nodes_1 = self.nodes_for_capture_index(*i);
-                    let mut nodes_2 = self.nodes_for_capture_index(*j);
-                    while let (Some(node1), Some(node2)) = (nodes_1.next(), nodes_2.next()) {
+                    let mut nodes_1 = self.nodes_for_capture_index(*i).peekable();
+                    let mut nodes_2 = self.nodes_for_capture_index(*j).peekable();
+                    while nodes_1.peek().is_some() && nodes_2.peek().is_some() {
+                        let node1 = nodes_1.next().unwrap();
+                        let node2 = nodes_2.next().unwrap();
                         let mut text1 = text_provider.text(node1);
                         let mut text2 = text_provider.text(node2);
                         let text1 = node_text1.get_text(&mut text1);
