@@ -1,3 +1,110 @@
+tree-sitter (0.25.9-1) unstable; urgency=medium
+
+  [ Dimitry Ishenko ]
+  * Merge tag 'v0.25.9'
+
+  [ Will Lillis ]
+  * fix(rust): correct crate versions in root Cargo.toml file
+
+  [ Christian Clason ]
+  * 0.25.9
+
+  [ Will Lillis ]
+  * fix(generate): use correct state id when adding terminal states to
+    non terminal extras
+  * fix(generate): return error when single state transitions have
+    indirectly recursive cycles.
+  * fix(test): improve readability of corpus error message mismatch
+
+  [ vemoo ]
+  * fix(web): correct type errors, improve build
+
+  [ ObserverOfTime ]
+  * fix(npm): add directory to repository fields
+  * fix(cli): fix DSL type declarations
+
+  [ Will Lillis ]
+  * fix(generate): warn users when extra rule can lead to parser hang
+
+  [ ObserverOfTime ]
+  * fix(bindings): properly detect MSVC compiler
+  * build(zig): support wasmtime for ARM64 Windows (MSVC)
+
+  [ Amaan Qureshi ]
+  * fix(lib): allow error nodes to match when they are child nodes
+  * fix(lib): check if an `ERROR` node is named before assuming it's the
+    builtin error node
+
+  [ ObserverOfTime ]
+  * style(zig): reformat files
+  * build(zig): use ArrayListUnmanaged
+  * build(zig): don't link wasmtime in static build
+  * build(zig): expose wasmtimeDep function
+  * fix(bindings): add tree-sitter as npm dev dependency
+  * fix(bindings): improve zig dependency fetching logic
+
+  [ Quentin LE DILAVREC ]
+  * fix(rust): EqCapture accepted cases where number of captured nodes
+    differed by one
+
+  [ WillLillis ]
+  * fix(wasm): delete `var_i32_type` after initializing global stack
+    pointer value
+
+  [ Alexander von Gluck ]
+  * fix(c): add Haiku support to endian.h
+
+  [ JacobCrabill ]
+  * build(zig): fix package hashes for Zig 0.14
+
+  [ Niklas Koll ]
+  * build(zig): update build.zig.zon for zig 0.14
+
+  [ Omar-xt ]
+  * build(zig): fix package name
+
+  [ Ronald T. Casili ]
+  * fix(bindings): update zig template files (#4637)
+
+  [ ObserverOfTime ]
+  * fix(bindings): use custom class name
+
+  [ Will Lillis ]
+  * fix(ci): ignore mismatched_lifetime_syntaxes lint when building
+    wasmtime
+  * fix(rust): ignore new mismatched-lifetime-syntaxes lint
+  * fix(rust): correct indices for `Node::utf16_text`
+  * fix(cli): improve error message when language in list can't be found
+    (#4643)
+
+  [ Pieter Goetschalckx ]
+  * fix(cli): add `reserved`  type declarations and schema
+
+  [ Riley Bruins ]
+  * fix(query): prevent cycles when analyzing hidden children
+
+  [ Robert Muir ]
+  * feat(bindings): improve python binding test
+
+  [ ObserverOfTime ]
+  * fix(bindings): improve python platform detection
+  * fix(bindings): only include top level LICENSE file
+  * fix(bindings): use parser title in lib.rs description
+
+  [ Riley Bruins ]
+  * fix(rust): prevent overflow in error message calculation
+
+  [ Will Lillis ]
+  * perf(generate): reserve more `Vec` capacities
+
+  [ Ronald T. Casili ]
+  * fix(build.zig): remove deprecated `addStaticLibrary()`
+
+  [ Alex Aron ]
+  * fix(lib): add wasm32 support to portable/endian.h (#4607)
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Mon, 15 Sep 2025 12:19:25 -0400
+
 tree-sitter (0.25.8-1) unstable; urgency=medium
 
   [ Dimitry Ishenko ]
